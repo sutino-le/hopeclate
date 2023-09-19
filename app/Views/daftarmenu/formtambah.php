@@ -5,47 +5,123 @@
 
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title"><a href="<?= base_url() ?>daftarmenu" class="btn btn-sm btn-warning"><i class="fas fa-arrow-alt-circle-left"></i>
+        <h3 class="card-title"><a href="<?= base_url() ?>daftarmenu" class="btn btn-sm btn-warning"><i
+                    class="fas fa-arrow-alt-circle-left"></i>
                 Back</a> Tambah Menu</h3>
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form action="<?= base_url() ?>simpanuser" method="post">
-        <?= csrf_field(); ?>
+    <?= form_open_multipart(base_url() . 'simpanmenu', 'class="formsimpan"'); ?>
+    <?= csrf_field(); ?>
 
-        <div class="card-body">
+    <div class="card-body">
 
-            <div class="form-group">
-                <label for="userid">User ID</label>
-                <input type="text" class="form-control" name="userid" id="userid" placeholder="Enter User ID">
-            </div>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-            </div>
-            <!-- <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                </div>
-            </div> -->
+
+        <div class="form-group">
+            <label for="menunama">User ID</label>
+            <input type="text" class="form-control" name="menunama" id="menunama" placeholder="Menu" autocomplete="off">
+            <div class="invalid-feedback errorMenu"></div>
         </div>
-        <!-- /.card-body -->
-
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <label for="menukategori">menukategori</label>
+            <select name="menukategori" id="menukategori" class="form-control">
+                <option value="">Pilih Kategori</option>
+                <option value=""></option>
+                <option value="Food">Food</option>
+                <option value="Beverages">Beverages</option>
+            </select>
+            <div class="invalid-feedback errorKategori"></div>
         </div>
+        <div class="form-group">
+            <label for="menuharga">menuharga</label>
+            <input type="menuharga" class="form-control" name="menuharga" id="menuharga" placeholder="Harga"
+                autocomplete="off">
+            <div class="invalid-feedback errorHarga"></div>
+        </div>
+        <!-- <div class="form-group">
+            <label for="exampleInputFile">Gambar</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="menufoto" name="menufoto">
+                <label class="custom-file-label" for="menufoto">Choose file</label>
+            </div>
+        </div> -->
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </div>
 
 
-    </form>
+    <?= form_close(); ?>
 </div>
 <!-- /.card -->
+
+
+
+<script>
+$(document).ready(function() {
+
+
+    $('.formsimpan').submit(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: "post",
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(response) {
+                if (response.error) {
+                    let err = response.error;
+
+                    if (err.errMenu) {
+                        $('#menunama').addClass('is-invalid');
+                        $('.errorMenu').html(err.errMenu);
+                    } else {
+                        $('#menunama').removeClass('is-invalid');
+                        $('#menunama').addClass('is-valid');
+                    }
+
+                    if (err.errKategori) {
+                        $('#menukategori').addClass('is-invalid');
+                        $('.errorKategori').html(err.errKategori);
+                    } else {
+                        $('#menukategori').removeClass('is-invalid');
+                        $('#menukategori').addClass('is-valid');
+                    }
+
+                    if (err.errHarga) {
+                        $('#menuharga').addClass('is-invalid');
+                        $('.errorHarga').html(err.errHarga);
+                    } else {
+                        $('#menuharga').removeClass('is-invalid');
+                        $('#menuharga').addClass('is-valid');
+                    }
+
+                }
+
+                if (response.sukses) {
+                    Swal.fire(
+                        'Berhasil',
+                        response.success,
+                        'success'
+                    ).then((result) => {
+                        window.location.href = (
+                            '<?= base_url() ?>/daftarmenutambah');
+                    })
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + '\n' + thrownError);
+            }
+        });
+
+        return false;
+    });
+});
+</script>
+
 
 
 <?= $this->endSection('isi') ?>

@@ -50,7 +50,7 @@ class Filters extends BaseConfig
             'filterAdmin' => [
                 'except' => [
                     '/', '/main', '/logout', '/user', '/usertambah', '/simpanuser', '/hapususer', '/edituser/*', '/editsimpan',
-                    '/daftarmenu', '/listData', '/daftarmenutambah',
+                    '/daftarmenu', '/listData', '/daftarmenutambah', '/simpanmenu', '/editmenu/*', '/updatemenu', '/hapusmenu/*', '/uploadgambar/*', '/simpangambar',
                 ]
             ],
         ],

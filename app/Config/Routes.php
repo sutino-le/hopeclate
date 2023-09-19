@@ -39,3 +39,9 @@ $routes->post('/editsimpan', 'User::editsimpan');
 // daftar menu
 $routes->get('/daftarmenu', 'DaftarMenu::index');
 $routes->get('/daftarmenutambah', 'DaftarMenu::formtambah');
+$routes->post('/simpanmenu', 'DaftarMenu::simpan');
+$routes->get('/editmenu/(:any)', 'DaftarMenu::formedit/$1');
+$routes->post('/updatemenu', 'DaftarMenu::update');
+$routes->get('/hapusmenu/(:any)', 'DaftarMenu::hapus/$1');
+$routes->get('/uploadgambar/(:any)', 'DaftarMenu::uploadgambar/$1');
+$routes->post('/simpangambar', 'DaftarMenu::simpangambar');

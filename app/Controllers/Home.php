@@ -2,11 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Models\ModelDaftarMenu;
+
 class Home extends BaseController
 {
     public function index(): string
     {
-        return view('dashboard/index');
+        // Menampilkan menu kategori Food
+        $food           = 'Food';
+        $beverages      = 'Beverages';
+
+        $modelDaftarMenu = new ModelDaftarMenu();
+
+        $data = [
+            'kategorifood'              => $modelDaftarMenu->Food($food),
+            'kategoribeverages'         => $modelDaftarMenu->Beverages($beverages),
+        ];
+
+        return view('dashboard/index', $data);
     }
 
 

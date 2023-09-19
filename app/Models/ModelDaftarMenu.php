@@ -12,4 +12,21 @@ class ModelDaftarMenu extends Model
 
     // Dates
     protected $useTimestamps = false;
+
+    // manggil kategori food
+    public function Food($food)
+    {
+        return $this->table('daftarmenu')->getWhere([
+            'menukategori' => $food
+        ]);
+    }
+
+
+    //  manggil kategori beverages
+    public function Beverages($beverages)
+    {
+        return $this->table('daftarmenu')->getWhere([
+            'menukategori' => $beverages
+        ]);
+    }
 }

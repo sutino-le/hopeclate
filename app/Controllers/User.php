@@ -91,8 +91,6 @@ class User extends BaseController
     }
 
 
-
-
     public function hapus()
     {
 
@@ -118,7 +116,6 @@ class User extends BaseController
         ];
         return view('user/viewdata', $data);
     }
-
 
 
 
