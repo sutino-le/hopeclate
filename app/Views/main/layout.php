@@ -59,7 +59,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="<?= base_url() ?>/assets_admin/index3.html" class="brand-link">
+            <a href="<?= base_url() ?>main" class="brand-link">
                 <img src="<?= base_url() ?>/upload/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Hope Clate</span>
             </a>
@@ -80,15 +80,29 @@
 
                 // if (session()->level == 1) :
                 if (session()->level == 1) {
-                    // Admin
+                    // Setting 
                     $setting = "show";
                     $users = "show";
                     $daftarmenu = "show";
+                    $bobot = "show";
+                    $kriteria = "show";
+
+
+                    // penilaian 
+                    $penilaian = "show";
+                    $nilai = "show";
                 } else {
-                    // Admin
+                    // Setting
                     $setting = "none";
                     $users = "none";
                     $daftarmenu = "none";
+                    $bobot = "none";
+                    $kriteria = "none";
+
+
+                    // penilaian 
+                    $penilaian = "none";
+                    $nilai = "none";
                 }
 
                 ?>
@@ -118,7 +132,6 @@
                                         <p>Users</p>
                                     </a>
                                 </li>
-
                             </ul>
                             <ul class="nav nav-treeview ml-2">
                                 <li class="nav-item" style="display: <?= $daftarmenu ?>;">
@@ -127,7 +140,42 @@
                                         <p>Menu</p>
                                     </a>
                                 </li>
+                            </ul>
+                            <ul class="nav nav-treeview ml-2">
+                                <li class="nav-item" style="display: <?= $bobot ?>;">
+                                    <a href="<?= site_url('bobot') ?>" class="nav-link <?= ($submenu == 'bobot') ? 'active' : '' ?>">
+                                        <i class="fas fa-balance-scale-left nav-icon text-info"></i>
+                                        <p>Bobot</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview ml-2">
+                                <li class="nav-item" style="display: <?= $kriteria ?>;">
+                                    <a href="<?= site_url('kriteria') ?>" class="nav-link <?= ($submenu == 'kriteria') ? 'active' : '' ?>">
+                                        <i class="fas fa-code-branch nav-icon text-info"></i>
+                                        <p>Kriteria</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
+
+                        <!-- penilaian -->
+                        <li class="nav-item <?= ($menu == 'penilaian') ? 'menu-open' : '' ?>" style="display: <?= $penilaian ?>;">
+                            <a href="#" class="nav-link <?= ($menu == 'penilaian') ? 'active' : '' ?>">
+                                <i class="fas fa-clipboard-list text-warning"></i>
+                                <p>
+                                    Penilaian
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview ml-2">
+                                <li class="nav-item" style="display: <?= $nilai ?>;">
+                                    <a href="<?= site_url('penilaian') ?>" class="nav-link <?= ($submenu == 'nilai') ? 'active' : '' ?>">
+                                        <i class="fas fa-clipboard-check nav-icon text-warning"></i>
+                                        <p>Nilai</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 

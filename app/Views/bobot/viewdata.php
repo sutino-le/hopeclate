@@ -11,8 +11,8 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Data Menu
-                            <a href="<?= base_url() ?>daftarmenutambah" class="btn btn-sm btn-primary"><i class="fas fa-plus-circle"></i>
+                        <h3 class="card-title">Data Bobot
+                            <a href="<?= base_url() ?>bobottambah" class="btn btn-sm btn-primary"><i class="fas fa-plus-circle"></i>
                                 Tambah</a>
                         </h3>
 
@@ -24,10 +24,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Jenis Menus</th>
-                                    <th>Kategori</th>
-                                    <th>Harga</th>
-                                    <th>Gambar</th>
+                                    <th>Jenis</th>
+                                    <th>Nilai</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -35,23 +33,16 @@
 
                                 <?php
                                 $no = 1;
-                                foreach ($viewdata as $rowmenu) :
+                                foreach ($viewdata as $rowbobot) :
                                 ?>
                                     <tr>
                                         <td><?= $no++ ?></td>
-                                        <td><?= $rowmenu['menunama'] ?></td>
-                                        <td><?= $rowmenu['menukategori'] ?></td>
-                                        <td><?= number_format($rowmenu['menuharga']) ?></td>
+                                        <td><?= $rowbobot['jenis'] ?></td>
+                                        <td><?= $rowbobot['nilai'] ?></td>
                                         <td>
-                                            <img src="<?= base_url() ?>upload/<?= $rowmenu['menufoto'] ?>" width="50px" height="50px">
+                                            <a href="<?= base_url() ?>editbobot/<?= $rowbobot['bobotid'] ?>" class="btn btn-sm btn-success d-inline" title="Edit"><i class="fas fa-edit"></i></a>
 
-
-                                            <button type="button" class="btn btn-sm btn-success" onclick="upload(<?= $rowmenu['menuid'] ?>)" title="Upload Gambar"><i class='fas fa-camera'></i></button>
-                                        </td>
-                                        <td>
-                                            <a href="<?= base_url() ?>editmenu/<?= $rowmenu['menuid'] ?>" class="btn btn-sm btn-success d-inline" title="Edit"><i class="fas fa-edit"></i></a>
-
-                                            <button type="button" class="btn btn-sm btn-danger" onclick="hapus(<?= $rowmenu['menuid'] ?>)" title="Delete"><i class='fas fa-trash-alt'></i></button>
+                                            <button type="button" class="btn btn-sm btn-danger" onclick="hapus(<?= $rowbobot['bobotid'] ?>)" title="Delete"><i class='fas fa-trash-alt'></i></button>
 
                                         </td>
                                     </tr>
@@ -72,7 +63,7 @@
 </section>
 
 <script>
-    function hapus(menuid) {
+    function hapus(bobotid) {
         Swal.fire({
             title: 'Apakah kamu yakin ?',
             text: "ingin menghapus data ini!",
@@ -85,7 +76,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: "<?= base_url() ?>hapusmenu/" + menuid,
+                    url: "<?= base_url() ?>hapusbobot/" + bobotid,
                     dataType: "json",
                     success: function(response) {
                         if (response.sukses) {
@@ -105,12 +96,6 @@
             }
         })
 
-    }
-
-
-
-    function upload(menuid) {
-        window.location.href = "<?= base_url() ?>uploadgambar/" + menuid;
     }
 </script>
 

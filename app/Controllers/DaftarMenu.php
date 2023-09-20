@@ -91,10 +91,10 @@ class DaftarMenu extends BaseController
                     'menukategori'      => $menukategori,
                     'menuharga'         => $menuharga,
                     'menufoto'          => '',
-                    'penjualan'         => '0',
-                    'rasa'              => '0',
-                    'kebersihan'        => '0',
-                    'pelayanan'         => '0',
+                    'n_harga'           => '0',
+                    'n_rasa'            => '0',
+                    'n_kebersihan'      => '0',
+                    'n_pelayanan'       => '0',
                     'totalnilai'        => '0',
                 ]);
 

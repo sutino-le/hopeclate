@@ -51,6 +51,9 @@ class Filters extends BaseConfig
                 'except' => [
                     '/', '/main', '/logout', '/user', '/usertambah', '/simpanuser', '/hapususer', '/edituser/*', '/editsimpan',
                     '/daftarmenu', '/listData', '/daftarmenutambah', '/simpanmenu', '/editmenu/*', '/updatemenu', '/hapusmenu/*', '/uploadgambar/*', '/simpangambar',
+                    '/bobot', '/bobottambah', '/simpanbobot', '/editbobot/*', '/updatebobot', '/hapusbobot/*',
+                    '/kriteria', '/kriteriatambah', '/simpankriteria', '/editkriteria/*', '/updatekriteria', '/hapuskriteria/*',
+                    '/penilaian', '/editnilai/*', '/updatenilai',
                 ]
             ],
         ],

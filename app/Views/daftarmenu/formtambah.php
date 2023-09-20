@@ -5,8 +5,7 @@
 
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title"><a href="<?= base_url() ?>daftarmenu" class="btn btn-sm btn-warning"><i
-                    class="fas fa-arrow-alt-circle-left"></i>
+        <h3 class="card-title"><a href="<?= base_url() ?>daftarmenu" class="btn btn-sm btn-warning"><i class="fas fa-arrow-alt-circle-left"></i>
                 Back</a> Tambah Menu</h3>
     </div>
     <!-- /.card-header -->
@@ -34,8 +33,7 @@
         </div>
         <div class="form-group">
             <label for="menuharga">menuharga</label>
-            <input type="menuharga" class="form-control" name="menuharga" id="menuharga" placeholder="Harga"
-                autocomplete="off">
+            <input type="number" class="form-control" name="menuharga" id="menuharga" placeholder="Harga" autocomplete="off">
             <div class="invalid-feedback errorHarga"></div>
         </div>
         <!-- <div class="form-group">
@@ -60,66 +58,66 @@
 
 
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
 
 
-    $('.formsimpan').submit(function(e) {
-        e.preventDefault();
+        $('.formsimpan').submit(function(e) {
+            e.preventDefault();
 
-        $.ajax({
-            type: "post",
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            dataType: "json",
-            success: function(response) {
-                if (response.error) {
-                    let err = response.error;
+            $.ajax({
+                type: "post",
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function(response) {
+                    if (response.error) {
+                        let err = response.error;
 
-                    if (err.errMenu) {
-                        $('#menunama').addClass('is-invalid');
-                        $('.errorMenu').html(err.errMenu);
-                    } else {
-                        $('#menunama').removeClass('is-invalid');
-                        $('#menunama').addClass('is-valid');
+                        if (err.errMenu) {
+                            $('#menunama').addClass('is-invalid');
+                            $('.errorMenu').html(err.errMenu);
+                        } else {
+                            $('#menunama').removeClass('is-invalid');
+                            $('#menunama').addClass('is-valid');
+                        }
+
+                        if (err.errKategori) {
+                            $('#menukategori').addClass('is-invalid');
+                            $('.errorKategori').html(err.errKategori);
+                        } else {
+                            $('#menukategori').removeClass('is-invalid');
+                            $('#menukategori').addClass('is-valid');
+                        }
+
+                        if (err.errHarga) {
+                            $('#menuharga').addClass('is-invalid');
+                            $('.errorHarga').html(err.errHarga);
+                        } else {
+                            $('#menuharga').removeClass('is-invalid');
+                            $('#menuharga').addClass('is-valid');
+                        }
+
                     }
 
-                    if (err.errKategori) {
-                        $('#menukategori').addClass('is-invalid');
-                        $('.errorKategori').html(err.errKategori);
-                    } else {
-                        $('#menukategori').removeClass('is-invalid');
-                        $('#menukategori').addClass('is-valid');
+                    if (response.sukses) {
+                        Swal.fire(
+                            'Berhasil',
+                            response.success,
+                            'success'
+                        ).then((result) => {
+                            window.location.href = (
+                                '<?= base_url() ?>/daftarmenutambah');
+                        })
                     }
-
-                    if (err.errHarga) {
-                        $('#menuharga').addClass('is-invalid');
-                        $('.errorHarga').html(err.errHarga);
-                    } else {
-                        $('#menuharga').removeClass('is-invalid');
-                        $('#menuharga').addClass('is-valid');
-                    }
-
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status + '\n' + thrownError);
                 }
+            });
 
-                if (response.sukses) {
-                    Swal.fire(
-                        'Berhasil',
-                        response.success,
-                        'success'
-                    ).then((result) => {
-                        window.location.href = (
-                            '<?= base_url() ?>/daftarmenutambah');
-                    })
-                }
-            },
-            error: function(xhr, ajaxOptions, thrownError) {
-                alert(xhr.status + '\n' + thrownError);
-            }
+            return false;
         });
-
-        return false;
     });
-});
 </script>
 
 

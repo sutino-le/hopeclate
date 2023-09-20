@@ -45,3 +45,33 @@ $routes->post('/updatemenu', 'DaftarMenu::update');
 $routes->get('/hapusmenu/(:any)', 'DaftarMenu::hapus/$1');
 $routes->get('/uploadgambar/(:any)', 'DaftarMenu::uploadgambar/$1');
 $routes->post('/simpangambar', 'DaftarMenu::simpangambar');
+
+
+
+
+// bobot
+$routes->get('/bobot', 'Bobot::index');
+$routes->get('/bobottambah', 'Bobot::formtambah');
+$routes->post('/simpanbobot', 'Bobot::simpan');
+$routes->get('/editbobot/(:any)', 'Bobot::formedit/$1');
+$routes->post('/updatebobot', 'Bobot::update');
+$routes->get('/hapusbobot/(:any)', 'Bobot::hapus/$1');
+
+
+
+
+// Kriteria
+$routes->get('/kriteria', 'Kriteria::index');
+$routes->get('/kriteriatambah', 'Kriteria::formtambah');
+$routes->post('/simpankriteria', 'Kriteria::simpan');
+$routes->get('/editkriteria/(:any)', 'Kriteria::formedit/$1');
+$routes->post('/updatekriteria', 'Kriteria::update');
+$routes->get('/hapuskriteria/(:any)', 'Kriteria::hapus/$1');
+
+
+
+
+// Penilaian
+$routes->get('/penilaian', 'Penilaian::index');
+$routes->get('/editnilai/(:any)', 'Penilaian::formedit/$1');
+$routes->post('/updatenilai', 'Penilaian::update');
