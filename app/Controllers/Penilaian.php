@@ -31,8 +31,8 @@ class Penilaian extends BaseController
         $dataNilai = $modelPenilaian->find($id);
 
         $data = [
-            'menu'              => 'setting',
-            'submenu'           => 'kriteria',
+            'menu'              => 'penilaian',
+            'submenu'           => 'nilai',
             'menuid'            => $dataNilai['menuid'],
             'menunama'          => $dataNilai['menunama'],
             'menuharga'         => $dataNilai['menuharga'],
@@ -121,6 +121,19 @@ class Penilaian extends BaseController
 
             echo json_encode($json);
         }
+    }
+
+
+
+    public function hitung()
+    {
+
+
+        $data = [
+            'menu'          => 'penilaian',
+            'submenu'       => 'perhitungan',
+        ];
+        return view('penilaian/kalkulasi', $data);
     }
 
 

@@ -21,6 +21,7 @@
             <input type="text" class="form-control" name="menunama" id="menunama" placeholder="Menu" autocomplete="off">
             <div class="invalid-feedback errorMenu"></div>
         </div>
+
         <div class="form-group">
             <label for="menukategori">menukategori</label>
             <select name="menukategori" id="menukategori" class="form-control">
@@ -31,18 +32,17 @@
             </select>
             <div class="invalid-feedback errorKategori"></div>
         </div>
+
         <div class="form-group">
             <label for="menuharga">menuharga</label>
             <input type="number" class="form-control" name="menuharga" id="menuharga" placeholder="Harga" autocomplete="off">
             <div class="invalid-feedback errorHarga"></div>
         </div>
-        <!-- <div class="form-group">
-            <label for="exampleInputFile">Gambar</label>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="menufoto" name="menufoto">
-                <label class="custom-file-label" for="menufoto">Choose file</label>
-            </div>
-        </div> -->
+
+        <div class="form-group">
+            <label for="deskripsi">Deskripsi Menu</label>
+            <textarea name="deskripsi" id="deskripsi" class="form-control" cols="30" rows="5" autocomplete="off"></textarea>
+        </div>
     </div>
     <!-- /.card-body -->
 

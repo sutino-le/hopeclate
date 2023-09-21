@@ -8,7 +8,7 @@ class ModelKriteria extends Model
 {
     protected $table            = 'kriteria';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['kriteria', 'bobot'];
+    protected $allowedFields    = ['kriteria', 'bobot', 'atribut'];
 
     // Dates
     protected $useTimestamps = false;

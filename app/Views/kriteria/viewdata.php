@@ -12,7 +12,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Data Kriteria
-                            <a href="<?= base_url() ?>kriteriatambah" class="btn btn-sm btn-primary"><i class="fas fa-plus-circle"></i>
+                            <a href="<?= base_url() ?>kriteriatambah" class="btn btn-sm btn-primary"><i
+                                    class="fas fa-plus-circle"></i>
                                 Tambah</a>
                         </h3>
 
@@ -26,6 +27,7 @@
                                     <th>No</th>
                                     <th>Kriteria</th>
                                     <th>Bobot</th>
+                                    <th>Atribut</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -35,17 +37,22 @@
                                 $no = 1;
                                 foreach ($viewdata->getResultArray() as $rowkriteria) :
                                 ?>
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $rowkriteria['kriteria'] ?></td>
-                                        <td><?= $rowkriteria['nilai'] ?> (<?= $rowkriteria['jenis'] ?>)</td>
-                                        <td>
-                                            <a href="<?= base_url() ?>editkriteria/<?= $rowkriteria['id'] ?>" class="btn btn-sm btn-success d-inline" title="Edit"><i class="fas fa-edit"></i></a>
+                                <tr>
+                                    <td><?= $no++ ?></td>
+                                    <td><?= $rowkriteria['kriteria'] ?></td>
+                                    <td><?= $rowkriteria['nilai'] ?> (<?= $rowkriteria['jenis'] ?>)</td>
+                                    <td><?= $rowkriteria['atribut'] ?></td>
+                                    <td>
+                                        <a href="<?= base_url() ?>editkriteria/<?= $rowkriteria['id'] ?>"
+                                            class="btn btn-sm btn-success d-inline" title="Edit"><i
+                                                class="fas fa-edit"></i></a>
 
-                                            <button type="button" class="btn btn-sm btn-danger" onclick="hapus(<?= $rowkriteria['id'] ?>)" title="Delete"><i class='fas fa-trash-alt'></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger"
+                                            onclick="hapus(<?= $rowkriteria['id'] ?>)" title="Delete"><i
+                                                class='fas fa-trash-alt'></i></button>
 
-                                        </td>
-                                    </tr>
+                                    </td>
+                                </tr>
                                 <?php endforeach ?>
 
                             </tbody>
@@ -63,40 +70,40 @@
 </section>
 
 <script>
-    function hapus(id) {
-        Swal.fire({
-            title: 'Apakah kamu yakin ?',
-            text: "ingin menghapus data ini!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ya, hapus!',
-            cancelButtonText: 'Batal'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                $.ajax({
-                    url: "<?= base_url() ?>hapuskriteria/" + id,
-                    dataType: "json",
-                    success: function(response) {
-                        if (response.sukses) {
-                            swal.fire(
-                                'Success',
-                                response.sukses,
-                                'success'
-                            ).then((result) => {
-                                window.location.reload();
-                            })
-                        }
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(xhr.status + '\n' + thrownError);
+function hapus(id) {
+    Swal.fire({
+        title: 'Apakah kamu yakin ?',
+        text: "ingin menghapus data ini!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "<?= base_url() ?>hapuskriteria/" + id,
+                dataType: "json",
+                success: function(response) {
+                    if (response.sukses) {
+                        swal.fire(
+                            'Success',
+                            response.sukses,
+                            'success'
+                        ).then((result) => {
+                            window.location.reload();
+                        })
                     }
-                });
-            }
-        })
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status + '\n' + thrownError);
+                }
+            });
+        }
+    })
 
-    }
+}
 </script>
 
 

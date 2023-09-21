@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,7 +37,8 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -55,10 +58,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="<?= base_url() ?>" class="nav-item nav-link active">Home</a>
+                        <a href="<?= base_url() ?>menu" class="nav-item nav-link">Menu</a>
+                        <a href="<?= base_url() ?>about" class="nav-item nav-link">About</a>
+                        <a href="<?= base_url() ?>contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="<?= base_url() ?>login" class="btn btn-primary py-2 px-4">Login</a>
                 </div>
@@ -91,7 +94,7 @@
 
 
         <!-- Service Start -->
-        <div class="container-xxl py-5">
+        <!-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -132,7 +135,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Service End -->
 
 
@@ -143,327 +146,309 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="<?= base_url() ?>/assets/img/about-1.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+                                    src="<?= base_url() ?>/assets/img/about-1.jpg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="<?= base_url() ?>/assets/img/about-2.png" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"
+                                    src="<?= base_url() ?>/assets/img/about-2.png" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="<?= base_url() ?>/assets/img/about-3.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
+                                    src="<?= base_url() ?>/assets/img/about-3.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="<?= base_url() ?>/assets/img/about-4.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                                    src="<?= base_url() ?>/assets/img/about-4.jpg">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Restoran</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                            dolore erat amet</p>
+                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Hope Clate</h1>
+                        <p class="mb-4">hopeClat was founded on April 16 2012 under the auspices of PT Hop Eterna.
+                            HopeClat is a restaurant that provides local to western food and sells several brands of
+                            alcohol. HopeClat Restaurant has the motto "Home made at its best" where the menus served
+                            come from the best quality ingredients. This motto means that the food served at HopeClat is
+                            the best food that can be enjoyed with a family atmosphere.</p>
                         <div class="row g-4 mb-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15
-                                    </h1>
-                                    <div class="ps-4">
-                                        <p class="mb-0">Years of</p>
-                                        <h6 class="text-uppercase mb-0">Experience</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50
-                                    </h1>
-                                    <div class="ps-4">
-                                        <p class="mb-0">Popular</p>
-                                        <h6 class="text-uppercase mb-0">Master Chefs</h6>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
+    </div>
+    <!-- About End -->
 
 
-        <!-- Menu Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <h1 class="mb-5">Most Popular Items</h1>
-                </div>
-                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">Foods</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- free -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-coffee fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">Beverages</h6>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-
-                        <!-- Menu 1 -->
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-
-                                <?php
-                                foreach ($kategorifood->getResultArray() as $rowFood) :
-                                ?>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="<?= base_url() ?>upload/<?= $rowFood['menufoto'] ?>" alt="" style="width: 80px;">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
-                                                <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                    <span><?= $rowFood['menunama'] ?></span>
-                                                    <span class="text-primary">Rp.
-                                                        <?= number_format($rowFood['menuharga']) ?></span>
-                                                </h5>
-                                                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
-                                                    diam</small>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                <?php endforeach ?>
-
-                            </div>
-                        </div>
-
-                        <!-- Menu 2 -->
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-
-                                <?php
-                                foreach ($kategoribeverages->getResultArray() as $rowBeverages) :
-                                ?>
-
-
-
-                                    <div class="col-lg-6">
-                                        <div class="d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="<?= base_url() ?>upload/<?= $rowBeverages['menufoto'] ?>" alt="" style="width: 80px;">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
-                                                <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                    <span><?= $rowBeverages['menunama'] ?></span>
-                                                    <span class="text-primary">Rp.
-                                                        <?= number_format($rowBeverages['menuharga']) ?></span>
-                                                </h5>
-                                                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
-                                                    diam</small>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                <?php endforeach ?>
-
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
+    <!-- Menu Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+                <h1 class="mb-5">Most Popular Items</h1>
             </div>
-        </div>
-        <!-- Menu End -->
-
-
-        <!-- Reservation Start -->
-        <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row g-0">
-                <div class="col-md-6  justify-content-center">
-                    <video controls autoplay width="100%" height="100%">
-                        <source src="<?= base_url() ?>upload/video.mp4" type="video/mp4" allow="autoplay">
-                    </video>
-                </div>
-                <div class="col-md-6 bg-dark d-flex align-items-center">
-                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
-                        <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="select1">
-                                            <option value="1">People 1</option>
-                                            <option value="2">People 2</option>
-                                            <option value="3">People 3</option>
-                                        </select>
-                                        <label for="select1">No Of People</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="text-center">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-                    <h1 class="mb-5">Our Clients Say!!!</h1>
-                </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                            href="#tab-1">
+                            <i class="fa fa-utensils fa-2x text-primary"></i>
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <small class="text-body">Popular</small>
+                                <h6 class="mt-n1 mb-0">Foods</h6>
                             </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- free -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                            href="#tab-2">
+                            <i class="fa fa-coffee fa-2x text-primary"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Popular</small>
+                                <h6 class="mt-n1 mb-0">Beverages</h6>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+
+                    <!-- Menu 1 -->
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+
+                            <?php
+                            foreach ($kategorifood->getResultArray() as $rowFood) :
+                            ?>
+
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img class="flex-shrink-0 img-fluid rounded"
+                                        src="<?= base_url() ?>upload/<?= $rowFood['menufoto'] ?>" alt=""
+                                        style="width: 80px;">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span><?= $rowFood['menunama'] ?></span>
+                                            <span class="text-primary">Rp.
+                                                <?= number_format($rowFood['menuharga']) ?></span>
+                                        </h5>
+                                        <small class="fst-italic"><?= $rowFood['deskripsi'] ?></small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <?php endforeach ?>
+
                         </div>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+
+                    <!-- Menu 2 -->
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+
+                            <?php
+                            foreach ($kategoribeverages->getResultArray() as $rowBeverages) :
+                            ?>
+
+
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img class="flex-shrink-0 img-fluid rounded"
+                                        src="<?= base_url() ?>upload/<?= $rowBeverages['menufoto'] ?>" alt=""
+                                        style="width: 80px;">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span><?= $rowBeverages['menunama'] ?></span>
+                                            <span class="text-primary">Rp.
+                                                <?= number_format($rowBeverages['menuharga']) ?></span>
+                                        </h5>
+                                        <small class="fst-italic"><?= $rowBeverages['deskripsi'] ?></small>
+                                    </div>
+                                </div>
                             </div>
+
+
+                            <?php endforeach ?>
+
+
                         </div>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu End -->
+
+
+    <!-- Reservation Start -->
+    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-0">
+            <div class="col-md-6  justify-content-center">
+                <video controls autoplay width="100%" height="100%">
+                    <source src="<?= base_url() ?>upload/video.mp4" type="video/mp4" allow="autoplay">
+                </video>
+            </div>
+            <div class="col-md-6 bg-dark d-flex align-items-center">
+                <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                    <h1 class="text-white mb-4">Book A Table Online</h1>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating date" id="date3" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" id="datetime"
+                                        placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                    <label for="datetime">Date & Time</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="select1">
+                                        <option value="1">People 1</option>
+                                        <option value="2">People 2</option>
+                                        <option value="3">People 3</option>
+                                    </select>
+                                    <label for="select1">No Of People</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Special Request" id="message"
+                                        style="height: 100px"></textarea>
+                                    <label for="message">Special Request</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
                             </div>
                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+                <h1 class="mb-5">Our Clients Say!!!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item bg-transparent border rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                        diam</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1">Client Name</h5>
+                            <small>Profession</small>
+                        </div>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
+                </div>
+                <div class="testimonial-item bg-transparent border rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                        diam</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1">Client Name</h5>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-transparent border rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                        diam</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1">Client Name</h5>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-transparent border rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                        diam</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url() ?>/assets/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                        <div class="ps-3">
+                            <h5 class="mb-1">Client Name</h5>
+                            <small>Profession</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
+    </div> -->
+    <!-- Testimonial End -->
 
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Hope Clate</h4>
-                        <a class="btn btn-link" href="">About</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Gedung Permata Kuningan, Ground Floor.
-                            Jalan Kuningan Mulia Kav 9C., Jakarta, Indonesia, Jakarta</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0818-0660-8249</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>hopeclatsales@gmail.com</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Sunday</h5>
-                        <p>08:30 WIB - 21:00 WIB</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Gedung Permata Kuningan, Ground Floor.
+                        Jalan Kuningan Mulia Kav 9C., Jakarta, Indonesia, Jakarta</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0818-0660-8249</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>hopeclatsales@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
+                    <h5 class="text-light fw-normal">Monday - Sunday</h5>
+                    <p>08:30 WIB - 21:00 WIB</p>
                 </div>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="<?= base_url() ?>">HopeClate <?= date('Y') ?></a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="<?= base_url() ?>">HopeClate <?= date('Y') ?></a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->

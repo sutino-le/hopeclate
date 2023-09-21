@@ -41,6 +41,7 @@ class Kriteria extends BaseController
         if ($this->request->isAJAX()) {
             $kriteria           = $this->request->getPost('kriteria');
             $bobot              = $this->request->getPost('bobot');
+            $atribut            = $this->request->getPost('atribut');
 
             $validation = \Config\Services::validation();
 
@@ -59,6 +60,13 @@ class Kriteria extends BaseController
                         'required'  => '{field} tidak boleh kosong'
                     ]
                 ],
+                'atribut' => [
+                    'rules'     => 'required',
+                    'label'     => 'Atribut',
+                    'errors'    => [
+                        'required'  => '{field} tidak boleh kosong'
+                    ]
+                ],
             ]);
 
             if (!$valid) {
@@ -66,6 +74,7 @@ class Kriteria extends BaseController
                     'error' => [
                         'errKriteria'       => $validation->getError('kriteria'),
                         'errBobot'          => $validation->getError('bobot'),
+                        'errAtribut'        => $validation->getError('atribut'),
                     ]
                 ];
             } else {
@@ -77,9 +86,10 @@ class Kriteria extends BaseController
 
 
                 $modelKriteria->insert([
-                    'id'            => '',
+                    'id'                => '',
                     'kriteria'          => $kriteria,
                     'bobot'             => $bobot,
+                    'atribut'           => $atribut,
                 ]);
 
                 $json = [
@@ -107,6 +117,7 @@ class Kriteria extends BaseController
             'id'            => $dataKriteria['id'],
             'kriteria'      => $dataKriteria['kriteria'],
             'bobot'         => $dataKriteria['bobot'],
+            'atribut'       => $dataKriteria['atribut'],
             'databobot'     => $modelBobot->findAll(),
         ];
         return view('kriteria/formedit', $data);
@@ -120,6 +131,7 @@ class Kriteria extends BaseController
             $id                 = $this->request->getPost('id');
             $kriteria           = $this->request->getPost('kriteria');
             $bobot              = $this->request->getPost('bobot');
+            $atribut            = $this->request->getPost('atribut');
 
             $validation = \Config\Services::validation();
 
@@ -138,6 +150,13 @@ class Kriteria extends BaseController
                         'required'  => '{field} tidak boleh kosong'
                     ]
                 ],
+                'atribut' => [
+                    'rules'     => 'required',
+                    'label'     => 'Atribut',
+                    'errors'    => [
+                        'required'  => '{field} tidak boleh kosong'
+                    ]
+                ],
             ]);
 
             if (!$valid) {
@@ -145,6 +164,7 @@ class Kriteria extends BaseController
                     'error' => [
                         'errKriteria'       => $validation->getError('kriteria'),
                         'errBobot'          => $validation->getError('bobot'),
+                        'errAtribut'        => $validation->getError('atribut'),
                     ]
                 ];
             } else {
@@ -158,6 +178,7 @@ class Kriteria extends BaseController
                 $modelKriteria->update($id, [
                     'kriteria'          => $kriteria,
                     'bobot'             => $bobot,
+                    'atribut'           => $atribut,
                 ]);
 
                 $json = [

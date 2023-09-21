@@ -8,7 +8,7 @@ class ModelDaftarMenu extends Model
 {
     protected $table            = 'daftarmenu';
     protected $primaryKey       = 'menuid';
-    protected $allowedFields    = ['menunama', 'menukategori', 'menuharga', 'menufoto', 'n_harga', 'n_rasa', 'n_kebersihan', 'n_pelayanan'];
+    protected $allowedFields    = ['menunama', 'menukategori', 'menuharga', 'menufoto', 'n_harga', 'n_rasa', 'n_kebersihan', 'n_pelayanan', 'totalnilai', 'deskripsi'];
 
     // Dates
     protected $useTimestamps = false;

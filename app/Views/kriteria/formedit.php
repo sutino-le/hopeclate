@@ -18,6 +18,7 @@
 
         <div class="row">
             <div class="col-6">
+
                 <div class="form-group">
                     <label for="kriteria">Kriteria</label>
                     <input type="hidden" name="id" value="<?= $id ?>">
@@ -25,6 +26,7 @@
                         placeholder="Kriteria" autocomplete="off">
                     <div class="invalid-feedback errorKriteria"></div>
                 </div>
+
                 <div class="form-group">
                     <label for="bobot">Bobot</label>
                     <select name="bobot" id="bobot" class="form-control">
@@ -43,6 +45,19 @@
                     </select>
                     <div class="invalid-feedback errorBobot"></div>
                 </div>
+
+                <div class="form-group">
+                    <label for="atribut">Atribut</label>
+                    <select name="atribut" id="atribut" class="form-control">
+                        <option value="<?= $atribut ?>" selected><?= $atribut ?></option>
+                        <option value="">Pilih Atribut</option>
+                        <option value=""></option>
+                        <option value="Benefit">Benefit</option>
+                        <option value="Cost">Cost</option>
+                    </select>
+                    <div class="invalid-feedback errorAtribut"></div>
+                </div>
+
             </div>
 
             <div class="col-3"></div>
@@ -126,6 +141,14 @@ $(document).ready(function() {
                     } else {
                         $('#bobot').removeClass('is-invalid');
                         $('#bobot').addClass('is-valid');
+                    }
+
+                    if (err.errAtribut) {
+                        $('#atribut').addClass('is-invalid');
+                        $('.errorAtribut').html(err.errAtribut);
+                    } else {
+                        $('#atribut').removeClass('is-invalid');
+                        $('#atribut').addClass('is-valid');
                     }
 
                 }

@@ -42,6 +42,7 @@ class DaftarMenu extends BaseController
             $menunama         = $this->request->getPost('menunama');
             $menukategori       = $this->request->getPost('menukategori');
             $menuharga       = $this->request->getPost('menuharga');
+            $deskripsi       = $this->request->getPost('deskripsi');
 
             $validation = \Config\Services::validation();
 
@@ -96,6 +97,7 @@ class DaftarMenu extends BaseController
                     'n_kebersihan'      => '0',
                     'n_pelayanan'       => '0',
                     'totalnilai'        => '0',
+                    'deskripsi'         => $deskripsi,
                 ]);
 
                 $json = [
@@ -116,12 +118,13 @@ class DaftarMenu extends BaseController
         $dataMenu = $modelDaftarMenu->find($id);
 
         $data = [
-            'menu'          => 'setting',
-            'submenu'       => 'daftarmenu',
+            'menu'              => 'setting',
+            'submenu'           => 'daftarmenu',
             'menuid'            => $dataMenu['menuid'],
             'menunama'          => $dataMenu['menunama'],
             'menukategori'      => $dataMenu['menukategori'],
             'menuharga'         => $dataMenu['menuharga'],
+            'deskripsi'         => $dataMenu['deskripsi'],
         ];
         return view('daftarmenu/formedit', $data);
     }
@@ -133,9 +136,10 @@ class DaftarMenu extends BaseController
 
         if ($this->request->isAJAX()) {
             $menuid         = $this->request->getPost('menuid');
-            $menunama         = $this->request->getPost('menunama');
-            $menukategori       = $this->request->getPost('menukategori');
-            $menuharga       = $this->request->getPost('menuharga');
+            $menunama       = $this->request->getPost('menunama');
+            $menukategori   = $this->request->getPost('menukategori');
+            $menuharga      = $this->request->getPost('menuharga');
+            $deskripsi      = $this->request->getPost('deskripsi');
 
             $validation = \Config\Services::validation();
 
@@ -183,6 +187,7 @@ class DaftarMenu extends BaseController
                     'menunama'          => $menunama,
                     'menukategori'      => $menukategori,
                     'menuharga'         => $menuharga,
+                    'deskripsi'         => $deskripsi,
                 ]);
 
                 $json = [

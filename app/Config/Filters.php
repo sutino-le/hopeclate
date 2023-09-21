@@ -40,7 +40,7 @@ class Filters extends BaseConfig
             // 'csrf',
             // 'invalidchars',
             'filterAdmin' => [
-                'except' => ['/', '/login', '/cekuser']
+                'except' => ['/', '/menu', '/about', '/contact', '/login', '/cekuser',]
             ],
         ],
         'after' => [
@@ -53,7 +53,7 @@ class Filters extends BaseConfig
                     '/daftarmenu', '/listData', '/daftarmenutambah', '/simpanmenu', '/editmenu/*', '/updatemenu', '/hapusmenu/*', '/uploadgambar/*', '/simpangambar',
                     '/bobot', '/bobottambah', '/simpanbobot', '/editbobot/*', '/updatebobot', '/hapusbobot/*',
                     '/kriteria', '/kriteriatambah', '/simpankriteria', '/editkriteria/*', '/updatekriteria', '/hapuskriteria/*',
-                    '/penilaian', '/editnilai/*', '/updatenilai',
+                    '/penilaian', '/editnilai/*', '/updatenilai', '/perhitungan',
                 ]
             ],
         ],

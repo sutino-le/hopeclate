@@ -7,6 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 // Tampilan Awal / dashboard
 $routes->get('/', 'Home::index');
+$routes->get('/menu', 'Home::menu');
+$routes->get('/about', 'Home::about');
+$routes->get('/contact', 'Home::contact');
 
 // Halaman Login
 $routes->get('/login', 'Home::login');
@@ -75,3 +78,4 @@ $routes->get('/hapuskriteria/(:any)', 'Kriteria::hapus/$1');
 $routes->get('/penilaian', 'Penilaian::index');
 $routes->get('/editnilai/(:any)', 'Penilaian::formedit/$1');
 $routes->post('/updatenilai', 'Penilaian::update');
+$routes->get('/perhitungan', 'Penilaian::hitung');

@@ -91,6 +91,7 @@
                     // penilaian 
                     $penilaian = "show";
                     $nilai = "show";
+                    $perhitungan = "show";
                 } else {
                     // Setting
                     $setting = "none";
@@ -103,6 +104,7 @@
                     // penilaian 
                     $penilaian = "none";
                     $nilai = "none";
+                    $perhitungan = "none";
                 }
 
                 ?>
@@ -110,8 +112,7 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+
                         <li class="nav-header">
                             <hr>Admin
                         </li>
@@ -169,6 +170,7 @@
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+
                             <ul class="nav nav-treeview ml-2">
                                 <li class="nav-item" style="display: <?= $nilai ?>;">
                                     <a href="<?= site_url('penilaian') ?>" class="nav-link <?= ($submenu == 'nilai') ? 'active' : '' ?>">
@@ -177,6 +179,16 @@
                                     </a>
                                 </li>
                             </ul>
+
+                            <ul class="nav nav-treeview ml-2">
+                                <li class="nav-item" style="display: <?= $perhitungan ?>;">
+                                    <a href="<?= site_url('perhitungan') ?>" class="nav-link <?= ($submenu == 'perhitungan') ? 'active' : '' ?>">
+                                        <i class="fas fa-hourglass-half nav-icon text-warning"></i>
+                                        <p>Kalkulasi</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
 
                     </ul>
