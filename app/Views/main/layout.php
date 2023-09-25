@@ -130,7 +130,7 @@
                                 <li class="nav-item" style="display: <?= $users ?>;">
                                     <a href="<?= site_url('user') ?>" class="nav-link <?= ($submenu == 'user') ? 'active' : '' ?>">
                                         <i class="fas fa-user nav-icon text-info"></i>
-                                        <p>Users</p>
+                                        <p>User</p>
                                     </a>
                                 </li>
                             </ul>
@@ -184,7 +184,7 @@
                                 <li class="nav-item" style="display: <?= $perhitungan ?>;">
                                     <a href="<?= site_url('perhitungan') ?>" class="nav-link <?= ($submenu == 'perhitungan') ? 'active' : '' ?>">
                                         <i class="fas fa-hourglass-half nav-icon text-warning"></i>
-                                        <p>Kalkulasi</p>
+                                        <p>Proses SAW</p>
                                     </a>
                                 </li>
                             </ul>

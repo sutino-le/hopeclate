@@ -3,10 +3,10 @@
 <?= $this->section('isi') ?>
 
 <style>
-    .list-group-flush {
-        height: 780px;
-        overflow-y: auto;
-    }
+.list-group-flush {
+    height: 780px;
+    overflow-y: auto;
+}
 </style>
 
 
@@ -63,11 +63,11 @@
                                     $c_kriteria = 1;
                                     while ($rowkriteria = mysqli_fetch_assoc($resultkriteria)) {
                                 ?>
-                                        <tr>
-                                            <td align="center"><?= $nokriteria++ ?></td>
-                                            <td align="center">C<?= $c_kriteria++ ?></td>
-                                            <td><?= $rowkriteria['kriteria'] ?></td>
-                                        </tr>
+                                <tr>
+                                    <td align="center"><?= $nokriteria++ ?></td>
+                                    <td align="center">C<?= $c_kriteria++ ?></td>
+                                    <td><?= $rowkriteria['kriteria'] ?></td>
+                                </tr>
                                 <?php
                                     }
                                 } else {
@@ -93,11 +93,11 @@
                                     $nobobot = 1;
                                     while ($rowbobot = mysqli_fetch_assoc($resultbobot)) {
                                 ?>
-                                        <tr>
-                                            <td align="center"><?= $nobobot++ ?></td>
-                                            <td><?= $rowbobot['jenis'] ?></td>
-                                            <td align="center"><?= $rowbobot['nilai'] ?></td>
-                                        </tr>
+                                <tr>
+                                    <td align="center"><?= $nobobot++ ?></td>
+                                    <td><?= $rowbobot['jenis'] ?></td>
+                                    <td align="center"><?= $rowbobot['nilai'] ?></td>
+                                </tr>
                                 <?php
                                     }
                                 } else {
@@ -297,13 +297,13 @@
                                     // output data of each row
                                     while ($rowmenu = mysqli_fetch_assoc($resulmenu)) {
                                 ?>
-                                        <tr>
-                                            <td><?= $rowmenu['menunama'] ?></td>
-                                            <td align="center"><?= $rowmenu['n_harga'] ?></td>
-                                            <td align="center"><?= $rowmenu['n_rasa'] ?></td>
-                                            <td align="center"><?= $rowmenu['n_kebersihan'] ?></td>
-                                            <td align="center"><?= $rowmenu['n_pelayanan'] ?></td>
-                                        </tr>
+                                <tr>
+                                    <td><?= $rowmenu['menunama'] ?></td>
+                                    <td align="center"><?= $rowmenu['n_harga'] ?></td>
+                                    <td align="center"><?= $rowmenu['n_rasa'] ?></td>
+                                    <td align="center"><?= $rowmenu['n_kebersihan'] ?></td>
+                                    <td align="center"><?= $rowmenu['n_pelayanan'] ?></td>
+                                </tr>
                                 <?php
                                     }
                                 } else {
@@ -328,11 +328,11 @@
                                     // output data of each row
                                     while ($row_bp = mysqli_fetch_assoc($result_bp)) {
                                 ?>
-                                        <tr>
-                                            <td><?= $row_bp['kriteria'] ?></td>
-                                            <td align="center"><?= $row_bp['nilai'] ?></td>
-                                            <td align="center"><?= $row_bp['atribut'] ?></td>
-                                        </tr>
+                                <tr>
+                                    <td><?= $row_bp['kriteria'] ?></td>
+                                    <td align="center"><?= $row_bp['nilai'] ?></td>
+                                    <td align="center"><?= $row_bp['atribut'] ?></td>
+                                </tr>
                                 <?php
                                     }
                                 } else {
@@ -369,12 +369,12 @@
                                                 // output data of each row
                                                 while ($rowmenu = mysqli_fetch_assoc($resulmenu)) {
                                             ?>
-                                                    <tr>
-                                                        <td align="center">| <?= $rowmenu['n_harga'] ?></td>
-                                                        <td align="center"><?= $rowmenu['n_rasa'] ?></td>
-                                                        <td align="center"><?= $rowmenu['n_kebersihan'] ?></td>
-                                                        <td align="center"><?= $rowmenu['n_pelayanan'] ?> |</td>
-                                                    </tr>
+                                            <tr>
+                                                <td align="center">| <?= $rowmenu['n_harga'] ?></td>
+                                                <td align="center"><?= $rowmenu['n_rasa'] ?></td>
+                                                <td align="center"><?= $rowmenu['n_kebersihan'] ?></td>
+                                                <td align="center"><?= $rowmenu['n_pelayanan'] ?> |</td>
+                                            </tr>
                                             <?php
                                                 }
                                             } else {
@@ -476,50 +476,50 @@
 
 
                                             ?>
-                                                    <tr>
-                                                        <td align="center">
-                                                            |
-                                                            <?php
+                                            <tr>
+                                                <td align="center">
+                                                    |
+                                                    <?php
                                                             if ($nr_minmaxharga == 0) {
                                                                 $nr_minmaxhrg = 1;
                                                             } else {
                                                                 $nr_minmaxhrg = $nr_minmaxharga;
                                                             }
                                                             ?>
-                                                            <?= $rowmenu['n_harga'] / $nr_minmaxhrg ?>
-                                                        </td>
-                                                        <td align="center">
-                                                            <?php
+                                                    <?= number_format($rowmenu['n_harga'] / $nr_minmaxhrg, 2, ",", ".") ?>
+                                                </td>
+                                                <td align="center">
+                                                    <?php
                                                             if ($nr_minmaxrasa == 0) {
                                                                 $nr_minmaxtaste = 1;
                                                             } else {
                                                                 $nr_minmaxtaste = $nr_minmaxrasa;
                                                             }
                                                             ?>
-                                                            <?= $rowmenu['n_rasa'] / $nr_minmaxtaste ?>
-                                                        </td>
-                                                        <td align="center">
-                                                            <?php
+                                                    <?= number_format($rowmenu['n_rasa'] / $nr_minmaxtaste, 2, ",", ".") ?>
+                                                </td>
+                                                <td align="center">
+                                                    <?php
                                                             if ($nr_minmaxkebersihan == 0) {
                                                                 $nr_minmaxbersih = 1;
                                                             } else {
                                                                 $nr_minmaxbersih = $nr_minmaxkebersihan;
                                                             }
                                                             ?>
-                                                            <?= $rowmenu['n_kebersihan'] / $nr_minmaxbersih ?>
-                                                        </td>
-                                                        <td align="center">
-                                                            <?php
+                                                    <?= number_format($rowmenu['n_kebersihan'] / $nr_minmaxbersih, 2, ",", ".") ?>
+                                                </td>
+                                                <td align="center">
+                                                    <?php
                                                             if ($nr_minmaxpelayanan == 0) {
                                                                 $nr_minmaxpelayan = 1;
                                                             } else {
                                                                 $nr_minmaxpelayan = $nr_minmaxpelayanan;
                                                             }
                                                             ?>
-                                                            <?= $rowmenu['n_pelayanan'] / $nr_minmaxpelayan ?>
-                                                            |
-                                                        </td>
-                                                    </tr>
+                                                    <?= number_format($rowmenu['n_pelayanan'] / $nr_minmaxpelayan, 2, ",", ".") ?>
+                                                    |
+                                                </td>
+                                            </tr>
                                             <?php
                                                 }
                                             } else {
@@ -541,7 +541,7 @@
                             <table width="100%" border="1">
                                 <tr align="center" bgcolor="yellow">
                                     <td><b>Menu</b></td>
-                                    <td><b>Perangkingan = Harga + Rasa + Kebersihan + Pelayangan</b></td>
+                                    <td><b>Perangkingan = Harga + Rasa + Kebersihan + Pelayanan</b></td>
                                     <td><b>Nilai Rangking</b></td>
                                 </tr>
                                 <?php
@@ -636,9 +636,9 @@
 
 
                                 ?>
-                                        <tr>
-                                            <td><?= $w_rowmenu['menunama'] ?></td>
-                                            <?php
+                                <tr>
+                                    <td><?= $w_rowmenu['menunama'] ?></td>
+                                    <?php
                                             // minmax harga
                                             if ($wnr_minmaxharga == 0) {
                                                 $wnr_minmaxhrg = 1;
@@ -668,17 +668,21 @@
                                             }
 
                                             ?>
-                                            <td align="center">
-                                                (<?= $wnr_bobotharga ?>) * (<?= $w_rowmenu['n_harga'] / $wnr_minmaxhrg ?>) +
-                                                (<?= $wnr_bobotrasa ?>) * (<?= $w_rowmenu['n_rasa'] / $wnr_minmaxtaste ?>) +
-                                                (<?= $wnr_bobotkebersihan ?>) *
-                                                (<?= $w_rowmenu['n_kebersihan'] / $wnr_minmaxbersih ?>) +
-                                                (<?= $wnr_bobotpelayanan ?>) *
-                                                (<?= $w_rowmenu['n_pelayanan'] / $wnr_minmaxpelayan ?>) =
-                                            </td>
-                                            <td align="center">
+                                    <td align="center">
+                                        (<?= $wnr_bobotharga ?>) *
+                                        (<?= number_format($w_rowmenu['n_harga'] / $wnr_minmaxhrg, 2, ",", ".") ?>) +
+                                        (<?= $wnr_bobotrasa ?>) *
+                                        (<?= number_format($w_rowmenu['n_rasa'] / $wnr_minmaxtaste, 2, ",", ".") ?>) +
+                                        (<?= $wnr_bobotkebersihan ?>) *
+                                        (<?= number_format($w_rowmenu['n_kebersihan'] / $wnr_minmaxbersih, 2, ",", ".") ?>)
+                                        +
+                                        (<?= $wnr_bobotpelayanan ?>) *
+                                        (<?= number_format($w_rowmenu['n_pelayanan'] / $wnr_minmaxpelayan, 2, ",", ".") ?>)
+                                        =
+                                    </td>
+                                    <td align="center">
 
-                                                <?php
+                                        <?php
 
                                                 $hasilrangking = ($wnr_bobotharga * ($w_rowmenu['n_harga'] / $wnr_minmaxhrg)) + ($wnr_bobotrasa * ($w_rowmenu['n_rasa'] / $wnr_minmaxtaste)) + ($wnr_bobotkebersihan * ($w_rowmenu['n_kebersihan'] / $wnr_minmaxbersih)) + ($wnr_bobotpelayanan * ($w_rowmenu['n_pelayanan'] / $wnr_minmaxpelayan));
 
@@ -687,15 +691,15 @@
 
 
 
-                                                echo $hasilrangking;
+                                                echo number_format($hasilrangking, 2, ",", ".");
 
 
                                                 $update_sqlmenu = mysqli_query($conn, "UPDATE daftarmenu SET totalnilai='$hasilrangking' WHERE menuid='$idmenu' ");
 
 
                                                 ?>
-                                            </td>
-                                        </tr>
+                                    </td>
+                                </tr>
                                 <?php
                                     }
                                 } else {

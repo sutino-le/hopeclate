@@ -16,7 +16,7 @@ class ModelDaftarMenu extends Model
     // manggil kategori food
     public function Food($food)
     {
-        return $this->table('daftarmenu')->getWhere([
+        return $this->table('daftarmenu')->orderBy('totalnilai', 'DESC')->getWhere([
             'menukategori' => $food
         ]);
     }
@@ -25,7 +25,7 @@ class ModelDaftarMenu extends Model
     //  manggil kategori beverages
     public function Beverages($beverages)
     {
-        return $this->table('daftarmenu')->getWhere([
+        return $this->table('daftarmenu')->orderBy('totalnilai', 'DESC')->getWhere([
             'menukategori' => $beverages
         ]);
     }
